@@ -1,6 +1,6 @@
       function showLoader() {
         $.colorbox({width:"400px", height:"180px", 
-          href:preloaderBaseURL + 'preload/preload.html',
+          href:preloaderBaseURL + '/preloader/preload/preload.html',
           overlayClose:false, onLoad: function() {
             $('#cboxClose').remove();
           }}
