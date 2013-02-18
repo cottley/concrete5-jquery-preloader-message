@@ -3,7 +3,8 @@
 	class JquerypreloadermessageBlockController extends BlockController {
 		
 		var $styleId;
-		 
+		var $preloaderBaseURL;
+    
 		protected $btTable = 'btJquerypreloadermessage';
 		protected $btInterfaceWidth = "400";
 		protected $btInterfaceHeight = "230";
@@ -28,6 +29,7 @@
       $bv->setBlockObject($this->getBlockObject());
       $blockURL = $bv->getBlockURL();
       $html = Loader::helper('html');            
+      $preloaderBaseURL = $blockURL;
       $this->addHeaderItem($html->css("{$blockURL}/preloader/colorbox-20130217/example1/colorbox.css"));
       $this->addHeaderItem($html->javascript("{$blockURL}/preloader/colorbox-20130217/jquery.colorbox.js"));
       $this->addHeaderItem($html->javascript("{$blockURL}/preloader/preload.js"));
@@ -37,6 +39,7 @@
     
 		function view(){ 
 			$this->set('styleId', $this->styleId);	
+      $this->set('preloaderBaseURL', $this->preloaderBaseURL);
 		}
 		
 		function save($data) { 
