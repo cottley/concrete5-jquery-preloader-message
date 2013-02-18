@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Loading test</title>
+  <link rel="stylesheet" href="colorbox-20130217/example1/colorbox.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="colorbox-20130217/jquery.colorbox.js"></script>
+	<script>
+      function showLoader() {
+        $.colorbox({width:"400px", height:"180px", 
+          href:'preload/preload.html',
+          overlayClose:false, onLoad: function() {
+            $('#cboxClose').remove();
+          }}
+        );
+      }
+      
+      function hideLoader() {
+        $.colorbox.close();
+      }
+  
+			$(document).ready(function(){
+        showLoader();
+        setTimeout("hideLoader()", 10000);
+      });
+  </script>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec magna vehicula sapien convallis congue. Etiam iaculis nibh vel urna dignissim a adipiscing tortor eleifend. Ut fringilla aliquet fermentum. Nunc ut nunc risus. Donec et fringilla lorem. Sed ut nulla est, nec elementum neque. Mauris scelerisque convallis laoreet. Nulla eu velit sem, non accumsan est. Aenean tincidunt, ipsum id faucibus commodo, lorem urna imperdiet arcu, at dapibus mi purus sed mauris. Aliquam massa odio, vulputate eu porttitor a, egestas at nisl. Praesent fermentum felis sed diam viverra pretium. Cras leo nibh, sodales a tincidunt ac, lobortis sed sapien. Quisque semper pulvinar tempus. Integer at ante ac nulla commodo lacinia id faucibus purus. Integer eros quam, dignissim vitae gravida et, sagittis quis mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p>Curabitur interdum mollis risus, eget placerat purus luctus in. Morbi eu enim nec orci euismod commodo ut sed ligula. Nullam non mauris sit amet purus auctor dapibus non et mauris. Pellentesque ultrices turpis in diam ullamcorper fringilla. Nulla ac nulla ante. Duis suscipit venenatis massa id pharetra. Aenean id tortor egestas purus malesuada imperdiet. Aenean sed urna urna. Mauris aliquam suscipit gravida. In sed est at risus laoreet semper. Duis pretium est nec risus gravida rutrum. Nullam quis tempor orci. Nulla et nisi lectus. Vivamus tincidunt dui commodo neque varius vitae blandit elit molestie.</p>
+<p>Nam id justo massa. Nullam pretium, nisi vitae convallis volutpat, sapien ante mollis lacus, quis cursus nunc ipsum id elit. Nulla turpis tortor, tristique non dignissim at, egestas in arcu. Morbi ipsum massa, interdum et accumsan ut, pulvinar sit amet tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum gravida, magna vel vehicula congue, risus lectus suscipit nibh, id consectetur lacus elit et ipsum. Aenean fermentum mattis tempus. Nulla tellus metus, dictum sit amet euismod quis, ornare a nulla. Donec et tortor et magna cursus aliquam ac id ante.</p>
+<p>Donec non velit metus. Curabitur sed elit magna, et facilisis justo. Vestibulum eget eleifend metus. Morbi diam mauris, rhoncus ut auctor vehicula, facilisis eu ipsum. In fermentum auctor eros a eleifend. Vestibulum eu velit sem, quis blandit eros. Nunc elit ante, congue vel ullamcorper ac, pulvinar ornare nunc. Sed consectetur enim et purus hendrerit porttitor. Nunc mattis nibh malesuada enim bibendum auctor.</p>
+<p>Donec molestie magna non elit interdum ut gravida quam sagittis. Integer diam nibh, porta a sodales sed, tincidunt sed ipsum. Suspendisse placerat ante eget diam tristique ac sollicitudin dui vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque lorem massa, facilisis sit amet accumsan eu, consequat id dolor. Sed dui magna, adipiscing a viverra eget, egestas eget lacus. Pellentesque pharetra adipiscing massa, vel mattis nibh aliquam ut. </p>
+</body>
+</html>
