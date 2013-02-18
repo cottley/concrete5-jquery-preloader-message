@@ -3,7 +3,7 @@
 if (!$isEditMode) {
 ?>
 <script language="javascript">
-var preloaderBaseURL = <?php echo $preloaderBaseURL; ?>;
+var preloaderBaseURL = "<?php echo $preloaderBaseURL; ?>";
 </script>
 <?php
 } else {
