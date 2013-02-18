@@ -4,20 +4,8 @@
   <link rel="stylesheet" href="colorbox-20130217/example1/colorbox.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="colorbox-20130217/jquery.colorbox.js"></script>
+	<script src="preload.js"></script>
 	<script>
-      function showLoader() {
-        $.colorbox({width:"400px", height:"180px", 
-          href:'preload/preload.html',
-          overlayClose:false, onLoad: function() {
-            $('#cboxClose').remove();
-          }}
-        );
-      }
-      
-      function hideLoader() {
-        $.colorbox.close();
-      }
-  
 			$(document).ready(function(){
         showLoader();
         setTimeout("hideLoader()", 10000);

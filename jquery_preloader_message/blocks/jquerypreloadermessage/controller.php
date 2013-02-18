@@ -2,7 +2,7 @@
 	defined('C5_EXECUTE') or die(_("Access Denied."));
 	class JquerypreloadermessageBlockController extends BlockController {
 		
-		var $pobj;
+		var $styleId;
 		 
 		protected $btTable = 'btJquerypreloadermessage';
 		protected $btInterfaceWidth = "400";
@@ -28,23 +28,19 @@
       $bv->setBlockObject($this->getBlockObject());
       $blockURL = $bv->getBlockURL();
       $html = Loader::helper('html');            
-      $this->addHeaderItem($html->javascript("{$blockURL}/jquery.loadJSON.js"));
+      $this->addHeaderItem($html->css("{$blockURL}/colorbox-20130217/example1/colorbox.css"));
+      $this->addHeaderItem($html->javascript("{$blockURL}/colorbox-20130217/jquery.colorbox.js"));
+      $this->addHeaderItem($html->javascript("{$blockURL}/preloader/preload.js"));
       $pg = Page::getCurrentPage();
       $this->set('isEditMode', $pg->isEditMode());
 		}
     
 		function view(){ 
-			$this->set('divId', $this->divId);	
-			$this->set('jsonURL', $this->jsonURL); 
-			$this->set('jsonURLType', $this->jsonURLType);
-      $this->set('jscontent', $this->jscontent);            
+			$this->set('styleId', $this->styleId);	
 		}
 		
 		function save($data) { 
-			$args['divId'] = isset($data['divId']) ? trim($data['divId']) : '';
-			$args['jsonURL'] = isset($data['jsonURL']) ? trim($data['jsonURL']) : '';
-			$args['jsonURLType'] = isset($data['jsonURLType']) ? trim($data['jsonURLType']) : '';
-			$args['jscontent'] = isset($data['jscontent']) ? $data['jscontent'] : '';      
+			$args['styleId'] = isset($data['styleId']) ? trim($data['styleId']) : '';
 			parent::save($args);
 		}
 		
